@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EFIK Staking Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f9fc; color: #333; margin: 0; padding: 0 }
+    header, section, footer { max-width: 600px; margin: 1.5rem auto; padding: 1rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05) }
+    h1, h2, h3 { color: #2a7f62 }
+    .badge { display: inline-block; background: #2a7f62; color: #fff; padding: 0.3rem 0.6rem; border-radius: 4px; text-decoration: none }
+    .info-box { background: #e8f5e9; border-left: 4px solid #2a7f62; padding: 1rem; margin-top: 1rem }
+    input[type="text"] { width: 100%; padding: 0.5rem; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 4px }
+    button { background: #2a7f62; color: #fff; border: none; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer }
+    button:disabled { background: #999 }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EFIK Staking Dashboard</h1>
+    <a href="https://bscscan.com/address/0xBeB63406959ED322AfC0d2881217D28F6c85815b" target="_blank" class="badge">
+      Contract Verified ✅
+    </a>
+  </header>
+
+  <section id="kyc">
+    <h2>🛡️ KYC & Security Notice</h2>
+    <p>
+      EFIK is a decentralized token. You are your own bank. 
+      Losing your seed phrase means losing access forever—nobody can restore it.
+    </p>
+  </section>
+
+  <section id="staking">
+    <h2>🔗 Stake Your EFIK</h2>
+    <button id="connectBtn">Connect Wallet</button>
+    <div id="stakeForm" style="display:none; margin-top:1rem;">
+      <input type="text" id="stakeAmount" placeholder="Amount to stake" />
+      <button id="stakeBtn">Stake</button>
+    </div>
+  </section>
+
+  <section id="referral">
+    <div class="info-box">
+      <h3>💡 Invite & Earn</h3>
+      <p>Share your referral link. Earn EFIK each time someone stakes.</p>
+      <input type="text" id="refLink" readonly />
+    </div>
+  </section>
+
+  <section id="airdrop">
+    <div class="info-box">
+      <h3>🎁 Daily Airdrop</h3>
+      <p>You’re eligible for one free airdrop per day. Claim it to grow your balance!</p>
+      <button id="airdropBtn">Claim Airdrop</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>EFIK Staking Dashboard &bull; Built with 💚 by Efikcoin</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
